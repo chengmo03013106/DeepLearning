@@ -93,3 +93,7 @@ cmake -D CMAKE_EXE_LINKER_FLAGS="-std=c++11" .
 yum install libpng-devel
 yum install gtk2-devel
 
+缺什么，装什么，一路make
+make install，否则 make caffe的时候，有问题
+
+
