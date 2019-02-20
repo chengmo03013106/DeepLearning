@@ -46,6 +46,17 @@ source /etc/profie
 如何用程序调用boost，输出版本？？？？？
 验证boost的版本是否满足>=1.55(暂时查不到)
 
+在编译boost的时候需要注意，加上额外对python的支持，从而生成libboost_python3.a/ liboost_python3.so
+
+首先，配置boost的时候执行：
+bash bootstrap.sh --with-python=/usr/local/bin/python3.7 --with-python-root= --with-python-version=3.7，我用python3的版本是3.7.2
+注意！ 这里的 --with-python=选项，给定的是绝对路径，而不是执行路径。
+然后需要执行：
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/local/include/python3.7m/"
+从而使编译环境可以知道python3安装路径，否则我一直报错:
+
+/usr/local/include/python3.7m/
+
 ## ************* caffe
 required opencv3
 
