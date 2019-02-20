@@ -59,6 +59,14 @@ export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/local/include/python3.7m/"
 
 ## caffe
 required opencv3
+required boost
+boost编译好后，在Makefile.config配置文件中的PYTHON_LIBRARIES := boost_python3 python3.7m选项
+我编译出的boost库文件名：
+libboost_python37.so
+libboost_python37.so.1.69.0
+所以需要使用boost_python37,而不是boost_python3
+
+
 
 下载：git clone git://github.com/BVLC/caffe.git
 安装：
