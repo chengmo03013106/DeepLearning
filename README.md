@@ -6,7 +6,7 @@
 
 # 搭建环境：
 
-## ************* yum 部分：
+## yum 部分：
 CentOS 7以上 环境搭建
 gcc 4.8.5
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -17,9 +17,9 @@ pkg-config --modversion opencv
 yum install gflags-devel glog-devel lmdb-devel
 
 
-## ************* OpenBLAS
+##  OpenBLAS
 
-## ************* Boost >= 1.55，自己使用的是1.69 *************************
+##  Boost >= 1.55，自己使用的是1.69 
 
 Boost >= 1.55
 用rpm -qa boost 查看CentOS的boost版本
@@ -57,7 +57,7 @@ export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/local/include/python3.7m/"
 
 /usr/local/include/python3.7m/
 
-## ************* caffe
+## caffe
 required opencv3
 
 下载：git clone git://github.com/BVLC/caffe.git
@@ -95,7 +95,7 @@ source ~/.bashrc
 验证：
 python命令行执行：import google.protobuf，不报错
 
-## ************* opencv3.4.3
+## opencv3.4.3
 cmake -D CMAKE_EXE_LINKER_FLAGS="-std=c++11" .
 
 如果不加 -std=c++11，编译会出现如下错误：
